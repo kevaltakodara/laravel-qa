@@ -4,6 +4,7 @@ namespace App\Modules\Questions\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App\User;
+use Illuminate\Support\Str;
 
 class Question extends Model
 {
