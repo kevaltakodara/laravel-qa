@@ -32,4 +32,14 @@ class QuestionsController extends Controller
 
         return redirect()->route('question.index')->with('success', 'Your question has been submitted.');
     }
+
+    public function edit(Question $question)
+    {
+        return view('Questions::edit', compact('question'));
+    }
+
+    public function update(AskQuestionRequest $request, Question $question){
+        $question->update($request->all());
+        return redirect()->route('question.index')->with('success', 'Your question has been updated');
+    }
 }
