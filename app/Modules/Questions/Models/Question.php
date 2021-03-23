@@ -1,10 +1,9 @@
 <?php
 
-namespace App;
-use App\User;
-use Illuminate\Support\Str;
+namespace App\Modules\Questions\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\User;
 
 class Question extends Model
 {

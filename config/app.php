@@ -162,6 +162,8 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+        ArtemSchander\L5Modular\ModuleServiceProvider::class,
+
         /*
          * Package Service Providers...
          */
