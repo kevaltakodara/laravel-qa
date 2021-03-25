@@ -43,6 +43,13 @@ class QuestionsController extends Controller
         return redirect()->route('question.index')->with('success', 'Your question has been updated');
     }
 
+    public function show(Question $question)
+    {
+        $question->increment('views');
+
+        return view('Questions::show', compact('question'));
+    }
+
     public function destroy(Question $question)
     {
         $question->delete();
