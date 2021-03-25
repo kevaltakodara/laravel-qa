@@ -42,4 +42,11 @@ class QuestionsController extends Controller
         $question->update($request->all());
         return redirect()->route('question.index')->with('success', 'Your question has been updated');
     }
+
+    public function destroy(Question $question)
+    {
+        $question->delete();
+
+        return redirect()->route('question.index')->with('success', 'Your question has been deleted.');
+    }
 }

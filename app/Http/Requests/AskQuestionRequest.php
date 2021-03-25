@@ -28,4 +28,13 @@ class AskQuestionRequest extends FormRequest
             'body'=>'required'
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'title.required'=>'Question title is required',
+            'title.max'=>'Question title must ne less then 255 charcter',
+            'body.required'=>'Question Description is required'
+        ];
+    }
 }
